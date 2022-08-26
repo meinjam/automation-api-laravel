@@ -10,8 +10,8 @@ class ProductController extends Controller {
         $search = $request->input( 'search' );
 
         $products = Product::query()
-            ->where( 'name', 'like', "%{$search}%" )
-            ->orWhere( 'code', 'like', "%{$search}%" )
+            ->where( 'name', 'ilike', '%' . $search . '%' )
+            ->orWhere( 'code', 'ilike', '%' . $search . '%' )
             ->get();
 
         return $products;
