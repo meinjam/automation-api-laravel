@@ -28,7 +28,6 @@ class ProductController extends Controller {
             'type'                => 'required|min:3|max:255',
             'durability'          => 'required|max:255',
             'max_durability'      => 'required|max:255',
-            'mileage'             => 'required|max:255',
             'price'               => 'required|max:255',
             'minimum_rent_period' => 'required|max:255',
         ];
