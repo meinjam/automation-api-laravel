@@ -18,11 +18,11 @@ return new class extends Migration {
             $table->string( 'type' )->default( 'plain' );
             $table->boolean( 'availability' )->default( true );
             $table->boolean( 'needing_repair' )->default( false );
-            $table->string( 'durability' );
-            $table->string( 'max_durability' );
-            $table->string( 'mileage' )->nullable();
-            $table->string( 'price' );
-            $table->string( 'minimum_rent_period' );
+            $table->bigInteger( 'durability' );
+            $table->bigInteger( 'max_durability' );
+            $table->bigInteger( 'mileage' )->nullable();
+            $table->bigInteger( 'price' );
+            $table->bigInteger( 'minimum_rent_period' );
             $table->timestamps();
         } );
     }
